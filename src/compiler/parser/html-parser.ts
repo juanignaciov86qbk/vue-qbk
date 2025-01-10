@@ -167,6 +167,20 @@ export function parseHTML(html, options: HTMLParserOptions) {
     } else {
       let endTagLength = 0
       const stackedTag = lastTag.toLowerCase()
+      const MAX_CONTENT_LENGTH = 500000 // Ajusta este valor según tus necesidades
+
+      if (
+        (stackedTag === 'script' ||
+          stackedTag === 'style' ||
+          stackedTag === 'textarea') &&
+        html.length > MAX_CONTENT_LENGTH
+      ) {
+        console.warn(
+          `Contenido muy grande detectado para <${stackedTag}>, abortando parsing para evitar ReDoS.`
+        )
+        return // Aborta el parsing inmediatamente
+      }
+
       const reStackedTag =
         reCache[stackedTag] ||
         (reCache[stackedTag] = new RegExp(

@@ -1,5 +1,5 @@
 {
-  "name": "vue",
+  "name": "vue-qbk",
   "version": "2.7.16",
   "packageManager": "pnpm@8.9.2",
   "description": "Reactive, component-oriented view layer for modern web interfaces.",
@@ -75,19 +75,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/vue.git"
+    "url": "git+https://github.com/juanignaciov86qbk/vue-qbk.git"
   },
   "keywords": [
     "vue"
   ],
-  "author": "Evan You",
+  "author": "Juan Ignacio Volpe",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vuejs/vue/issues"
   },
   "homepage": "https://github.com/vuejs/vue#readme",
   "dependencies": {
-    "@vue/compiler-sfc": "workspace:*",
+    "@vue/compiler-sfc": "*",
     "csstype": "^3.1.0"
   },
   "devDependencies": {
