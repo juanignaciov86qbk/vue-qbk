@@ -1,6 +1,6 @@
 {
   "name": "vue-qbk",
-  "version": "2.7.16-qbk",
+  "version": "2.7.16",
   "packageManager": "pnpm@8.9.2",
   "description": "Reactive, component-oriented view layer for modern web interfaces.",
   "main": "dist/vue.runtime.common.js",
@@ -87,7 +87,7 @@
   },
   "homepage": "https://github.com/vuejs/vue#readme",
   "dependencies": {
-    "@vue/compiler-sfc": "workspace:*",
+    "@vue/compiler-sfc": "*",
     "csstype": "^3.1.0"
   },
   "devDependencies": {
